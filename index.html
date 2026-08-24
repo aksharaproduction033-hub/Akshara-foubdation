@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akshara Foundation - Psychology Training & Compassionate Counselling</title>
-    <link rel="icon" type="image/png" href="/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -20,6 +19,7 @@
             color: var(--text-dark);
             background-color: var(--bg-light);
             line-height: 1.6;
+            scroll-behavior: smooth;
         }
         header {
             background: #ffffff;
@@ -28,6 +28,7 @@
             position: sticky;
             top: 0;
             z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
         .header-container {
             display: flex;
@@ -42,10 +43,17 @@
             gap: 12px;
             text-decoration: none;
         }
-        .brand-container img {
-            height: 48px;
-            width: 48px;
-            object-fit: contain;
+        .brand-logo-text {
+            background: var(--primary-color);
+            color: white;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 1.2rem;
         }
         .brand-text h1 {
             font-size: 1.15rem;
@@ -55,10 +63,10 @@
             line-height: 1.2;
         }
         .brand-text p {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: var(--accent-color);
             margin: 2px 0 0 0;
-            font-weight: 500;
+            font-weight: 600;
         }
         nav {
             display: flex;
@@ -67,7 +75,7 @@
         nav a {
             text-decoration: none;
             color: var(--text-dark);
-            font-weight: 500;
+            font-weight: 600;
             transition: color 0.2s;
         }
         nav a:hover {
@@ -108,13 +116,41 @@
         .btn:hover {
             background-color: #042f2e;
         }
-        .hero-image {
+        .hero-box {
             flex: 1;
-        }
-        .hero-image img {
-            width: 100%;
+            background: linear-gradient(135deg, #0f766e, #14b8a6);
+            color: white;
+            padding: 3rem;
             border-radius: 12px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .about-section {
+            max-width: 1000px;
+            margin: 4rem auto;
+            padding: 3rem 2rem;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        .about-section h2 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .content-block {
+            margin-bottom: 2rem;
+        }
+        .content-block h3 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        .tamil-section {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px dashed #e5e7eb;
         }
         footer {
             background: #111827;
@@ -143,32 +179,48 @@
 
     <header>
         <div class="header-container">
-            <a href="/" class="brand-container">
-                <img src="/__l5e/assets-v1/06f3dbe4-580d-45a1-9d68-6e3d1782ebb2/akshara-logo.png" alt="Akshara Foundation Logo">
+            <a href="#" class="brand-container">
+                <div class="brand-logo-text">AF</div>
                 <div class="brand-text">
-                    <h1>Akshara Foundation <span style="font-size:0.9rem; font-weight:normal;" data-ta="அக்ஷரா ஃபவுண்டேஷன்">(அக்ஷரா ஃபவுண்டேஷன்)</span></h1>
-                    <p>Empowering Minds, Lightening Hearts <span style="display:block; font-size:0.75rem;" data-ta="மனதை வலிமைப்படுத்துவோம், இதயங்களை இலகுவாக்குவோம்">(மனதை வலிமைப்படுத்துவோம், இதயங்களை இலகுவாக்குவோம்)</span></p>
+                    <h1>Akshara Foundation <span style="font-size:0.85rem; font-weight:normal;">(அக்ஷரா ஃபவுண்டேஷன்)</span></h1>
+                    <p>Empowering Minds, Lightening Hearts <span style="display:block; font-size:0.7rem; color:#1f2937;">(மனதை வலிமைப்படுத்துவோம், இதயங்களை இலகுவாக்குவோம்)</span></p>
                 </div>
             </a>
             <nav>
-                <a href="/">Home</a>
-                <a href="/courses">Courses</a>
-                <a href="/counselling">Counselling & E-Book</a>
-                <a href="/about">About Us</a>
-                <a href="/contact">Contact Us</a>
+                <a href="#">Home</a>
+                <a href="#about">About Us</a>
             </nav>
         </div>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section class="hero">
             <div class="hero-content">
                 <h2>Learn psychology. Heal with compassion.</h2>
                 <p>Akshara Foundation offers simple, affordable online psychology courses and friendly counselling for everyone — conducted through Zoom and WhatsApp.</p>
-                <a href="/courses" class="btn">Explore Courses</a>
+                <a href="#about" class="btn">Explore More</a>
             </div>
-            <div class="hero-image">
-                <img src="/assets/hero-C7Y7s5dw.jpg" alt="Counselling Session">
+            <div class="hero-box">
+                <h3 style="margin-top:0; font-size:1.8rem;">Safe & Confidential</h3>
+                <p>Professional mental health education and guidance accessible to every home.</p>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="about-section">
+            <h2>About Us / எங்களைப் பற்றி</h2>
+            <p style="text-align: center; color: var(--accent-color); font-weight: 600; margin-bottom: 2rem;">Welcome to Akshara Foundation (அக்ஷரா ஃபவுண்டேஷனுக்கு உங்களை வரவேற்கிறோம்)</p>
+
+            <div class="content-block">
+                <p>At Akshara Foundation, we believe that true well-being begins when the mind finds clarity and the heart finds peace. Founded with a deep commitment to making mental health support and quality education accessible to everyone, our organization serves as a beacon of hope and guidance for individuals seeking emotional balance and personal growth.</p>
+                <p>மனம் தெளிவுபெற்று, இதயம் அமைதியடையும் போதுதான் உண்மையான நல்வாழ்வு தொடங்குகிறது என்ற நம்பிக்கையுடன் அக்ஷரா ஃபவுண்டேஷன் செயல்படுகிறது. மனநல ஆதரவையும், தரமான கல்வியையும் அனைவருக்கும் எளிதில் கிடைக்கச் செய்ய வேண்டும் என்ற உன்னத நோக்கத்துடன் தொடங்கப்பட்ட எங்கள் நிறுவனம் செயல்படுகிறது.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Our Mission / எங்கள் குறிக்கோள்</h3>
+                <p>Our mission is to bridge the gap between professional mental health care and the community. We strive to empower minds through expert-led psychology training while healing hearts with compassionate, confidential, and affordable counselling services.</p>
+                <p>தொழில்முறை மனநலப் பாதுகாப்பையும் சமூகத்தையும் இணைப்பதே எங்கள் லட்சியமாகும். நிபுணர்களின் வழிகாட்டுதலோடு உளவியல் பயிற்சி அளித்து மனதை வலிமைப்படுத்தவும், அனுதாபமான, ரகசியமான மற்றும் மலிவு விலை கவுன்சிலிங் மூலம் இதயங்களை இலகுவாக்கவும் நாங்கள் உழைக்கிறோம்.</p>
             </div>
         </section>
     </main>
