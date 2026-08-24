@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Akshara Foundation</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0f766e;
+            --accent-color: #d97706;
+            --text-dark: #1f2937;
+            --bg-light: #f9fafb;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.7;
+        }
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .brand-container img {
+            height: 48px;
+            width: 48px;
+            object-fit: contain;
+        }
+        .brand-text h1 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 0;
+            line-height: 1.2;
+        }
+        .brand-text p {
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            margin: 2px 0 0 0;
+            font-weight: 500;
+        }
+        nav {
+            display: flex;
+            gap: 24px;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: var(--primary-color);
+        }
+        .about-section {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            padding-bottom: 3rem;
+        }
+        .about-header {
+            text-align: center;
+            padding: 2.5rem 0 1.5rem 0;
+            border-bottom: 1px solid #e5e7eb;
+            margin-bottom: 2rem;
+        }
+        .about-header h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        .about-images {
+            display: flex;
+            gap: 20px;
+            margin: 2rem 0;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .about-images img {
+            width: 47%;
+            min-width: 280px;
+            border-radius: 8px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+            object-fit: cover;
+            height: 250px;
+        }
+        .content-block {
+            margin-bottom: 2.5rem;
+        }
+        .content-block h3 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+        }
+        .tamil-section {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px dashed #e5e7eb;
+        }
+        footer {
+            background: #111827;
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .about-images img {
+                width: 100%;
+            }
+            nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="/" class="brand-container">
+                <img src="/__l5e/assets-v1/06f3dbe4-580d-45a1-9d68-6e3d1782ebb2/akshara-logo.png" alt="Akshara Foundation Logo">
+                <div class="brand-text">
+                    <h1>Akshara Foundation <span style="font-size:0.9rem; font-weight:normal;">(அக்ஷரா ஃபவுண்டேஷன்)</span></h1>
+                    <p>Empowering Minds, Lightening Hearts <span style="display:block; font-size:0.75rem;">(மனதை வலிமைப்படுத்துவோம், இதயங்களை இலகுவாக்குவோம்)</span></p>
+                </div>
+            </a>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/courses">Courses</a>
+                <a href="/counselling">Counselling & E-Book</a>
+                <a href="/about" style="color: var(--primary-color); font-weight: 700;">About Us</a>
+                <a href="/contact">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-section">
+            
+            <!-- English Section -->
+            <div class="about-header">
+                <h2>About Us</h2>
+                <p style="font-size: 1.1rem; color: var(--accent-color); font-weight: 600;">Welcome to Akshara Foundation</p>
+            </div>
+
+            <div class="about-images">
+                <img src="/assets/watermarked_img_7535870780302617618.jpg" alt="Team and Community Support">
+                <img src="/assets/watermarked_img_4414378886780039708.jpg" alt="Brain Balance and Mental Health">
+            </div>
+
+            <div class="content-block">
+                <p>At Akshara Foundation, we believe that true well-being begins when the mind finds clarity and the heart finds peace. Founded with a deep commitment to making mental health support and quality education accessible to everyone, our organization serves as a beacon of hope and guidance for individuals seeking emotional balance and personal growth.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Our Mission</h3>
+                <p>Our mission is to bridge the gap between professional mental health care and the community. We strive to empower minds through expert-led psychology training while healing hearts with compassionate, confidential, and affordable counselling services.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>What We Do</h3>
+                <ul>
+                    <li><strong>Professional Education:</strong> We conduct simplified, impactful online courses—including Psychology & Counselling, Hypnotism & Mesmerism, and Ancient Yoga—via Zoom and WhatsApp, complete with official E-Certificates.</li>
+                    <li><strong>Compassionate Counselling:</strong> We offer a safe, non-judgmental space where individuals can overcome emotional struggles, stress, and life challenges with the help of professional guidance.</li>
+                </ul>
+                <p>Rooted in traditional wisdom and driven by modern psychological insights, Akshara Foundation is dedicated to walking with you on your journey toward inner peace, mental strength, and a happier life.</p>
+            </div>
+
+            <!-- Tamil Section -->
+            <div class="tamil-section">
+                <div class="about-header" style="border-bottom: none; padding-bottom: 0;">
+                    <h2>எங்களைப் பற்றி</h2>
+                    <p style="font-size: 1.1rem; color: var(--accent-color); font-weight: 600;">அக்ஷரா ஃபவுண்டேஷனுக்கு உங்களை வரவேற்கிறோம்</p>
+                </div>
+
+                <div class="content-block">
+                    <p>மனம் தெளிவுபெற்று, இதயம் அமைதியடையும் போதுதான் உண்மையான நல்வாழ்வு தொடங்குகிறது என்ற நம்பிக்கையுடன் அக்ஷரா ஃபவுண்டேஷன் செயல்படுகிறது. மனநல ஆதரவையும், தரமான கல்வியையும் அனைவருக்கும் எளிதில் கிடைக்கச் செய்ய வேண்டும் என்ற உன்னத நோக்கத்துடன் தொடங்கப்பட்ட எங்கள் நிறுவனம், உணர்ச்சி ரீதியான சமநிலையையும் தனிப்பட்ட வளர்ச்சியையும் தேடும் நபர்களுக்கு ஒரு வழிகாட்டியாகத் திகழ்கிறது.</p>
+                </div>
+
+                <div class="content-block">
+                    <h3>எங்கள் குறிக்கோள் (Our Mission)</h3>
+                    <p>தொழில்முறை மனநலப் பாதுகாப்பையும் சமூகத்தையும் இணைப்பதே எங்கள் லட்சியமாகும். நிபுணர்களின் வழிகாட்டுதலோடு உளவியல் பயிற்சி அளித்து மனதை வலிமைப்படுத்தவும், அனுதாபமான, ரகசியமான மற்றும் மலிவு விலை கவுன்சிலிங் மூலம் இதயங்களை இலகுவாக்கவும் நாங்கள் உழைக்கிறோம்.</p>
+                </div>
+
+                <div class="content-block">
+                    <h3>நாங்கள் வழங்கும் சேவைகள் (What We Do)</h3>
+                    <ul>
+                        <li><strong>தொழில்முறை சான்றிதழ் படிப்புகள்:</strong> உளவியல் மற்றும் கவுன்சிலிங், ஹிப்னாடிசம் மற்றும் மெஸ்மரிசம், பாரம்பரிய யோகா போன்ற எளிய ஆன்லைன் வகுப்புகளை Zoom மற்றும் WhatsApp மூலம் நடத்தி, அதிகாரப்பூர்வ இ-சான்றிதழ்களை வழங்குகிறோம்.</li>
+                        <li><strong>அனுதாபமான கவுன்சிலிங்:</strong> மன அழுத்தம் மற்றும் வாழ்க்கைப் போராட்டங்களை எதிர்கொள்ளும் நபர்கள் தங்களது உணர்ச்சிச் சுமையிலிருந்து விடுபட்டு, பாதுகாப்பான சூழலில் நிபுணர்களின் வழிகாட்டுதலைப் பெற உதவுகிறோம்.</li>
+                    </ul>
+                    <p>பாரம்பரிய ஞானத்தின் வேர்களில் நின்று, நவீன உளவியல் அறிவியலின் வழிகாட்டுதலோடு, உங்களின் மன அமைதி மற்றும் வலிமையான எதிர்காலத்திற்கான பயணத்தில் அக்ஷரா ஃபவுண்டேஷன் உங்களோடு எப்போதும் பயணிக்கும்.</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Akshara Foundation. All rights reserved. | Accessible mental health education for every home.</p>
+    </footer>
+
+</body>
+</html>
