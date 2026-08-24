@@ -1,232 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ta">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akshara Foundation - Psychology Training & Compassionate Counselling</title>
+    <meta name="description" content="Akshara Foundation offers professional psychology training, expert-led mental health education, and compassionate, confidential counselling services.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #0f766e;
-            --accent-color: #d97706;
-            --text-dark: #1f2937;
-            --bg-light: #f9fafb;
+            --primary: #0f766e;
+            --secondary: #14b8a6;
+            --accent: #d97706;
+            --dark: #1f2937;
+            --light: #f3f4f6;
+            --white: #ffffff;
         }
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: var(--text-dark);
-            background-color: var(--bg-light);
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-        header {
-            background: #ffffff;
-            border-bottom: 1px solid #e5e7eb;
-            padding: 1rem 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        .header-container {
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
+        
+        /* Top Bar */
+        .top-bar {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 8px 20px;
+            font-size: 0.85rem;
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .brand-container {
-            display: flex;
             align-items: center;
-            gap: 12px;
-            text-decoration: none;
+            flex-wrap: wrap;
+            gap: 10px;
         }
-        .brand-logo-text {
-            background: var(--primary-color);
-            color: white;
-            width: 45px;
-            height: 45px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-        .brand-text h1 {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin: 0;
-            line-height: 1.2;
-        }
-        .brand-text p {
-            font-size: 0.75rem;
-            color: var(--accent-color);
-            margin: 2px 0 0 0;
-            font-weight: 600;
-        }
-        nav {
-            display: flex;
-            gap: 24px;
-        }
-        nav a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 600;
-            transition: color 0.2s;
-        }
-        nav a:hover {
-            color: var(--primary-color);
-        }
+        .top-bar contacts { display: flex; gap: 20px; }
+        .top-bar span { color: var(--secondary); font-weight: 600; }
+
+        /* Header & Nav */
+        header { background: var(--white); box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; }
+        .logo-area { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-circle { background: var(--primary); color: var(--white); width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem; }
+        .logo-text h1 { font-size: 1.1rem; color: var(--primary); font-weight: 700; line-height: 1.2; }
+        .logo-text p { font-size: 0.75rem; color: var(--accent); font-weight: 600; }
+        
+        nav ul { display: flex; list-style: none; gap: 25px; align-items: center; }
+        nav ul li a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.95rem; transition: color 0.2s; }
+        nav ul li a:hover { color: var(--primary); }
+
+        /* Hero Section */
         .hero {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 4rem auto;
-            padding: 0 2rem;
-            gap: 40px;
-        }
-        .hero-content {
-            flex: 1;
-        }
-        .hero-content h2 {
-            font-size: 2.5rem;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-        }
-        .hero-content p {
-            font-size: 1.1rem;
-            color: #4b5563;
-            margin-bottom: 2rem;
-        }
-        .btn {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-block;
-            transition: background 0.2s;
-        }
-        .btn:hover {
-            background-color: #042f2e;
-        }
-        .hero-box {
-            flex: 1;
-            background: linear-gradient(135deg, #0f766e, #14b8a6);
-            color: white;
-            padding: 3rem;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, rgba(15, 118, 110, 0.9), rgba(20, 184, 166, 0.8)), url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80') center/cover;
+            color: var(--white);
+            padding: 80px 20px;
             text-align: center;
         }
-        .about-section {
-            max-width: 1000px;
-            margin: 4rem auto;
-            padding: 3rem 2rem;
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-        }
-        .about-section h2 {
-            color: var(--primary-color);
-            font-size: 2rem;
-            text-align: center;
-            margin-bottom: 1.5rem;
-        }
-        .content-block {
-            margin-bottom: 2rem;
-        }
-        .content-block h3 {
-            color: var(--primary-color);
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-        }
-        .tamil-section {
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 2px dashed #e5e7eb;
-        }
-        footer {
-            background: #111827;
-            color: white;
-            padding: 3rem 2rem;
-            margin-top: 4rem;
-            text-align: center;
-        }
-        footer p {
-            margin: 0;
-            color: #9ca3af;
-            font-size: 0.9rem;
-        }
+        .hero-content { max-width: 800px; margin: 0 auto; }
+        .hero-content h2 { font-size: 2.5rem; margin-bottom: 20px; font-weight: 700; }
+        .hero-content p { font-size: 1.15rem; margin-bottom: 30px; opacity: 0.95; }
+        .btn { background: var(--accent); color: var(--white); padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: 600; display: inline-block; transition: background 0.2s; }
+        .btn:hover { background: #b45309; }
+
+        /* Services Grid */
+        .container { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
+        .section-title { text-align: center; margin-bottom: 40px; }
+        .section-title h3 { font-size: 2rem; color: var(--primary); margin-bottom: 10px; }
+        .section-title p { color: #6b7280; font-size: 1rem; }
+
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .service-card { background: var(--white); padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--primary); }
+        .service-card h4 { color: var(--primary); font-size: 1.3rem; margin-bottom: 15px; }
+        .service-card p { font-size: 0.95krem; color: #4b5563; margin-bottom: 15px; }
+
+        /* About & Mission Section */
+        .about-section { background: var(--white); padding: 60px 20px; margin-top: 50px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; max-width: 1200px; margin: 0 auto; }
+        .about-text h3 { color: var(--primary); font-size: 2rem; margin-bottom: 20px; }
+        .about-text p { margin-bottom: 15px; color: #4b5563; }
+        .about-img img { width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+
+        /* Footer */
+        footer { background: #111827; color: var(--white); padding: 50px 20px 20px; margin-top: 60px; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-col h4 { color: var(--secondary); font-size: 1.1rem; margin-bottom: 20px; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 10px; }
+        .footer-col ul li a { color: #9ca3af; text-decoration: none; transition: color 0.2s; }
+        .footer-col ul li a:hover { color: var(--white); }
+        .footer-bottom { text-align: center; border-top: 1px solid #374151; padding-top: 20px; color: #9ca3af; font-size: 0.85rem; }
+
         @media (max-width: 768px) {
-            .hero {
-                flex-direction: column;
-                margin: 2rem auto;
-            }
-            nav {
-                display: none;
-            }
+            .about-grid { grid-template-columns: 1fr; }
+            nav ul { display: none; }
+            .hero-content h2 { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
 
+    <!-- Top Helpline Bar (Similar to Professional NGO Layout) -->
+    <div class="top-bar">
+        <div>அவசர உதவி / Counselling Helpline: <span>+94 77 000 0000</span></div>
+        <div>Email: support@aksharafoundation.org</div>
+    </div>
+
+    <!-- Main Header -->
     <header>
-        <div class="header-container">
-            <a href="#" class="brand-container">
-                <div class="brand-logo-text">AF</div>
-                <div class="brand-text">
-                    <h1>Akshara Foundation <span style="font-size:0.85rem; font-weight:normal;">(அக்ஷரா ஃபவுண்டேஷன்)</span></h1>
-                    <p>Empowering Minds, Lightening Hearts <span style="display:block; font-size:0.7rem; color:#1f2937;">(மனதை வலிமைப்படுத்துவோம், இதயங்களை இலகுவாக்குவோம்)</span></p>
+        <div class="nav-container">
+            <a href="#" class="logo-area">
+                <div class="logo-circle">AF</div>
+                <div class="logo-text">
+                    <h1>Akshara Foundation <span style="font-size:0.8rem; font-weight:normal;">(அக்ஷரா ஃபவுண்டேஷன்)</span></h1>
+                    <p>Empowering Minds, Lightening Hearts</p>
                 </div>
             </a>
             <nav>
-                <a href="#">Home</a>
-                <a href="#about">About Us</a>
+                <ul>
+                    <li><a href="#">முகப்பு (Home)</a></li>
+                    <li><a href="#about">எங்களைப் பற்றி (About)</a></li>
+                    <li><a href="#services">சேவைகள் (Services)</a></li>
+                    <li><a href="#contact">தொடர்புக்கு (Contact)</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <h2>Learn psychology. Heal with compassion.</h2>
-                <p>Akshara Foundation offers simple, affordable online psychology courses and friendly counselling for everyone — conducted through Zoom and WhatsApp.</p>
-                <a href="#about" class="btn">Explore More</a>
-            </div>
-            <div class="hero-box">
-                <h3 style="margin-top:0; font-size:1.8rem;">Safe & Confidential</h3>
-                <p>Professional mental health education and guidance accessible to every home.</p>
-            </div>
-        </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>மனதை வலிமைப்படுத்துவோம், இதயங்களை இலகுவாக்குவோம்</h2>
+            <p>உளவியல் பயிற்சிகள், எளிய ஆன்லைன் வகுப்புகள் மற்றும் மனநல வழிகாட்டல் சேவைகள் மூலம் உங்கள் வாழ்க்கையை மேம்படுத்த அக்ஷரா ஃபவுண்டேஷன் உங்களை வரவேற்கிறது.</p>
+            <a href="#services" class="btn">சேவைகளைக் கண்டறியவும்</a>
+        </div>
+    </section>
 
-        <!-- About Us Section -->
-        <section id="about" class="about-section">
-            <h2>About Us / எங்களைப் பற்றி</h2>
-            <p style="text-align: center; color: var(--accent-color); font-weight: 600; margin-bottom: 2rem;">Welcome to Akshara Foundation (அக்ஷரா ஃபவுண்டேஷனுக்கு உங்களை வரவேற்கிறோம்)</p>
-
-            <div class="content-block">
-                <p>At Akshara Foundation, we believe that true well-being begins when the mind finds clarity and the heart finds peace. Founded with a deep commitment to making mental health support and quality education accessible to everyone, our organization serves as a beacon of hope and guidance for individuals seeking emotional balance and personal growth.</p>
-                <p>மனம் தெளிவுபெற்று, இதயம் அமைதியடையும் போதுதான் உண்மையான நல்வாழ்வு தொடங்குகிறது என்ற நம்பிக்கையுடன் அக்ஷரா ஃபவுண்டேஷன் செயல்படுகிறது. மனநல ஆதரவையும், தரமான கல்வியையும் அனைவருக்கும் எளிதில் கிடைக்கச் செய்ய வேண்டும் என்ற உன்னத நோக்கத்துடன் தொடங்கப்பட்ட எங்கள் நிறுவனம் செயல்படுகிறது.</p>
+    <!-- Services Section -->
+    <div class="container" id="services">
+        <div class="section-title">
+            <h3>எங்கள் சேவைகள் (Our Services)</h3>
+            <p>அனைவருக்கும் எளிதில் கிடைக்கக்கூடிய தொழில்முறை மனநல சேவைகள்</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <h4>உளவியல் பயிற்சி (Psychology Training)</h4>
+                <p>எளிய முறையில் உளவியல் அறிவைப் பெறவும், மனநலத் துறையில் தங்களை மேம்படுத்திக்கொள்ள விரும்புவோருக்கான சிறப்பு ஆன்லைன் பயிற்சி வகுப்புகள்.</p>
             </div>
-
-            <div class="content-block">
-                <h3>Our Mission / எங்கள் குறிக்கோள்</h3>
-                <p>Our mission is to bridge the gap between professional mental health care and the community. We strive to empower minds through expert-led psychology training while healing hearts with compassionate, confidential, and affordable counselling services.</p>
-                <p>தொழில்முறை மனநலப் பாதுகாப்பையும் சமூகத்தையும் இணைப்பதே எங்கள் லட்சியமாகும். நிபுணர்களின் வழிகாட்டுதலோடு உளவியல் பயிற்சி அளித்து மனதை வலிமைப்படுத்தவும், அனுதாபமான, ரகசியமான மற்றும் மலிவு விலை கவுன்சிலிங் மூலம் இதயங்களை இலகுவாக்கவும் நாங்கள் உழைக்கிறோம்.</p>
+            <div class="service-card">
+                <h4>ரகசிய கவுன்சிலிங் (Confidential Counselling)</h4>
+                <p>வாழ்க்கை முறைச் சிக்கல்கள், மன அழுத்தம் மற்றும் கவலைகளுக்கு Zoom மற்றும் WhatsApp வாயிலாகப் பாதுகாப்பான வழிகாட்டல்.</p>
             </div>
-        </section>
-    </main>
+            <div class="service-card">
+                <h4>சமூக விழிப்புணர்வு (Community Support)</h4>
+                <p>மனநலம் பற்றிய விழிப்புணர்வை மக்களிடம் கொண்டு சேர்த்து, ஒவ்வொரு குடும்பத்திலும் நிம்மதியை நிலைநாட்டுவதற்கான முயற்சிகள்.</p>
+            </div>
+        </div>
+    </div>
 
-    <footer>
-        <p>© 2026 Akshara Foundation. All rights reserved. | Accessible mental health education for every home.</p>
+    <!-- About Section -->
+    <section class="container" id="about">
+        <div class="about-section">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>எங்களைப் பற்றி (About Us)</h3>
+                    <p>மனம் தெளிவுபெற்று, இதயம் அமைதியடையும் போதுதான் உண்மையான நல்வாழ்வு தொடங்குகிறது என்ற நம்பிக்கையுடன் அக்ஷரா ஃபவுண்டேஷன் செயல்படுகிறது. மனநல ஆதரவையும், தரமான கல்வியையும் அனைவருக்கும் எளிதில் கிடைக்கச் செய்ய வேண்டும் என்ற உன்னத நோக்கத்துடன் தொடங்கப்பட்ட நிறுவனம் இதுவாகும்.</p>
+                    <p>தொழில்முறை மனநலப் பாதுகாப்பையும் சமூகத்தையும் இணைப்பதே எங்கள் லட்சியமாகும். நிபுணர்களின் வழிகாட்டுதலோடு உளவியல் பயிற்சி அளித்து மனதை வலிமைப்படுத்தவும், அனுதாபமான மற்றும் மலிவு விலை கவுன்சிலிங் சேவைகளை வழங்குகிறோம்.</p>
+                </div>
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Akshara Foundation Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>Akshara Foundation</h4>
+                <p style="color: #9ca3af; font-size: 0.9rem;">Empowering Minds, Lightening Hearts. Accessible mental health education and guidance for every home.</p>
+            </div>
+            <div class="footer-col">
+                <h4>விரைவு இணைப்புகள் (Quick Links)</h4>
+                <ul>
+                    <li><a href="#">முகப்பு</a></li>
+                    <li><a href="#about">எங்களைப் பற்றி</a></li>
+                    <li><a href="#services">சேவைகள்</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>தொடர்பு கொள்ள</h4>
+                <p style="color: #9ca3af; font-size: 0.9rem;">தொடர்புக்கு: +94 77 000 0000<br>மின்னஞ்சல்: support@aksharafoundation.org</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Akshara Foundation. All rights reserved.</p>
+        </div>
     </footer>
 
 </body>
